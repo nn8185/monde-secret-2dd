@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monde secret — 2D</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="login" class="login-screen">
+  <div class="login-card">
+    <div class="logo">✦</div><p class="eyebrow">ESPACE PRIVÉ</p>
+    <h1>Monde secret</h1><p class="sub">Connecte-toi pour rejoindre le monde.</p>
+    <form id="loginForm">
+      <label for="username">Identifiant</label><input id="username" autocomplete="username" required maxlength="30" placeholder="Ton identifiant">
+      <label for="password">Mot de passe</label><input id="password" type="password" autocomplete="current-password" required placeholder="Ton mot de passe">
+      <button type="submit">Entrer dans le monde</button>
+      <p id="loginError" class="error"></p>
+    </form>
+    <p class="tiny">Accès réservé aux joueurs autorisés.</p>
+  </div>
+</section>
+<section id="game" class="game-screen hidden">
+  <header><div class="brand"><span>✦</span> Monde secret</div><div class="top-right"><span id="onlineCount">0 joueur</span><span id="myName"></span><button id="logout" class="small-btn">Quitter</button></div></header>
+  <main class="layout">
+    <section class="world-panel"><div class="world-heading"><div><b>La prairie des rencontres</b><small>Explore le monde et retrouve tes amis.</small></div><span class="connected-dot">EN LIGNE</span></div><canvas id="world" width="900" height="600"></canvas><div class="controls">Déplacement : <b>ZQSD</b> ou <b>flèches</b> · Sur téléphone : toucher-glisser dans le monde</div></section>
+    <aside class="side-panel"><div class="panel-title">Joueurs connectés <span id="countBadge">0</span></div><div id="playersList" class="players-list"></div><div class="chat-title">Discussion</div><div id="messages" class="messages"><p class="system-msg">Bienvenue dans le monde !</p></div><form id="chatForm" class="chat-form"><input id="chatInput" maxlength="180" placeholder="Écris un message…" autocomplete="off"><button aria-label="Envoyer">➤</button></form></aside>
+  </main>
+</section>
+<script src="game.js"></script>
+</body></html>
