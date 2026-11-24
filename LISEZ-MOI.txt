@@ -1,0 +1,32 @@
+# Monde secret — jeu 2D multijoueur
+
+## Comptes créés
+Les mots de passe sont personnels : transmets chaque ligne uniquement au joueur concerné.
+
+- alexis : identifiant **alexis** — mot de passe **fVKkIHhcWwuh**
+- neoh : identifiant **neoh** — mot de passe **gSmTzVCEif86**
+- matheo : identifiant **matheo** — mot de passe **CrTlb-S5GXlA**
+- maxime : identifiant **maxime** — mot de passe **5qYHyIccPWnx**
+
+Les mots de passe ne sont pas enregistrés en clair dans le serveur : `accounts.json` contient uniquement des empreintes cryptographiques.
+
+## Démarrer sur Windows
+1. Décompresse le ZIP.
+2. Ouvre le dossier `Monde-Secret-2D`.
+3. Clique dans la barre d'adresse de l'Explorateur, tape `cmd` puis Entrée.
+4. Tape :
+   ```
+   npm install
+   npm start
+   ```
+5. Sur ton PC, ouvre `http://localhost:3000`.
+
+## Jouer avec des amis
+- Sur le même Wi-Fi : les autres ouvrent `http://ADRESSE-IP-DU-PC:3000`.
+- Pour jouer depuis des réseaux différents, il faut héberger ce dossier sur un serveur accessible sur Internet. N'expose pas directement le port de ton PC sans configuration sécurisée.
+
+## Confidentialité
+- Il n'y a pas de création de compte publique : seuls les quatre comptes définis dans `accounts.json` peuvent se connecter.
+- Le site ne demande pas de nom réel ni d'adresse e-mail.
+- « Secret » signifie ici privé par identifiants, pas invisible ou inviolable. Pour un déploiement Internet, utilise HTTPS/WSS et protège l'accès au serveur.
+- Pour changer un mot de passe, demande un nouveau fichier de comptes généré avec un nouveau mot de passe; ne partage pas `accounts.json`.

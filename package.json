@@ -1,0 +1,12 @@
+{
+  "name": "monde-secret-2d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monde 2D privé multijoueur avec connexion et chat",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
